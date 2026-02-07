@@ -1,5 +1,6 @@
 :root {
   --accent-color: #272044;
+  --btn-color: #462cb3;
 }
 
 body {
@@ -15,8 +16,12 @@ body {
 
 section {
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 100px 0;
+  max-width: 100%;
+  padding: 100px 35px;
+}
+
+section.secondary {
+  background: rgba(18, 18, 18, 0.1);
 }
 
 .grid {
@@ -24,16 +29,24 @@ section {
   grid-gap: 64px;
 }
 
-.img-responsive {
-  max-width: 100%;
-}
-
 .two-column-grid {
   grid-template-columns: auto auto;
 }
 
+.three-column-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .uneven-three-column-grid {
   grid-template-columns: 1fr 2fr 2fr;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-responsive {
+  max-width: 100%;
 }
 
 header {
@@ -53,7 +66,7 @@ header h1 {
 }
 
 header h2 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
   margin: 0;
 }
@@ -67,6 +80,7 @@ header h3 {
 
 header a {
   background: white;
+  border-radius: 100px;
   color: var(--accent-color);
   display: inline-block;
   font-size: 14px;
@@ -99,12 +113,59 @@ main h3 {
   text-transform: uppercase;
 }
 
+main h4 {
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+main h5 {
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
 main p {
   color: var(--accent-color);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   opacity: 0.7;
+}
+
+.embed-song {
+  border-radius: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  margin: 30px 0;
+}
+
+.card-body {
+  padding: 30px 30px 20px;
+}
+
+.card-footer {
+  padding: 0 30px 45px;
+}
+
+.btn {
+  background: var(--btn-color);
+  border-radius: 100px;
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
 }
 
 footer {
